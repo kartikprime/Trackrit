@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --milk-bg: #F8F6F2;
+  --milk-card: #FFFFFF;
+  --milk-border: #EDE9E0;
+  --accent: #0D9488;
+  --accent-dark: #0F766E;
+  --text-primary: #1C1917;
+  --text-secondary: #78716C;
+  --warning-yellow: #D97706;
+  --warning-red: #DC2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--milk-bg);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--milk-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #D6D3D1;
+  border-radius: 3px;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Card style */
+.card {
+  background: var(--milk-card);
+  border: 1px solid var(--milk-border);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 6px;
+  background: var(--milk-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* Accordion animation */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
